@@ -28,7 +28,7 @@
  * @Description  : file content
  * @FilePath     : \easy_work_templates\Bash.md
 -->
-# EASY BASH
+### EASY BASH
 
 This is a reminder for bash. 
 
