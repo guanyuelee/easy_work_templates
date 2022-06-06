@@ -1,7 +1,7 @@
 <!--
  * @Author       : Guanyue li
  * @Date         : 2022-05-31 15:34:17
- * @LastEditTime : 2022-06-06 16:49:58
+ * @LastEditTime : 2022-06-06 16:51:49
  * @Description  : file content
  * @FilePath     : \easy_work_templates\README.md
 -->
@@ -10,7 +10,7 @@
 + My report <a href="./Report Template.pptx">template</a> for a quick slide. 
 + A purely linux shadowsock <a href="./Config Shadowsocks.md">configuration</a>: sslocal + proxychains4.
   
-## Scripts in Lunux
+## [Scripts in Lunux](./scripts)
 + Template for scripts | <a href="./scripts/00.template.sh">Link</a>.
 + Hello World | <a href="./scripts/01.hello.sh">Link</a>.
 + Display full name | <a href="./scripts/02.full_name.sh">Link</a>.
