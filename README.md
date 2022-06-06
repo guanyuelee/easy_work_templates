@@ -1,7 +1,7 @@
 <!--
  * @Author       : Guanyue li
  * @Date         : 2022-05-31 15:34:17
- * @LastEditTime : 2022-06-06 17:03:08
+ * @LastEditTime : 2022-06-07 01:38:36
  * @Description  : file content
  * @FilePath     : \easy_work_templates\README.md
 -->
@@ -28,6 +28,64 @@
  * @Description  : file content
  * @FilePath     : \easy_work_templates\Bash.md
 -->
+### [EASY CONDA]()
+```bash
+wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+bash xxx
+
+# update conda
+vim ~/.condarc
+#### type them in the .condarc 
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+ssl_verify: true
+#####
+
+# update apt
+mv /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo vim /etc/apt/sources.list
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+```
+
+### [EASY OPENGL]()
+```bash
+# install required libraries. 
+sudo apt-get update
+sudo apt-get install cmake pkg-config
+sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev
+sudo apt-get install libglew-dev libglfw3-dev libglm-dev
+sudo apt-get install libao-dev libmpg123-dev
+# my system need extra libs. 
+sudo apt-get install libxinerama-dev libxcursor-dev
+# Install GLFW Library
+cd /usr/local/lib/
+git clone https://github.com/glfw/glfw.git
+cd glfw
+cmake .
+make
+sudo make install
+# Install GLAD include files   https://glad.dav1d.de/
+# hello_triangle.cpp file: https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/2.1.hello_triangle/hello_triangle.cpp
+# comple the code
+g++ hello_triangle.cpp glad.c -ldl -lglfw 
+./a.out
+
+# If you encounter error like cannot find iris or swart, please set: 
+export MESA_LOADER_DRIVER_OVERRIDE=i965
+```
+
+
 ### [EASY BASH](./Bash.md)
 
 This is a reminder for bash. 
