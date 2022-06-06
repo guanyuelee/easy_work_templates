@@ -1,7 +1,7 @@
 <!--
  * @Author       : Guanyue li
  * @Date         : 2022-05-31 15:34:17
- * @LastEditTime : 2022-06-06 16:55:27
+ * @LastEditTime : 2022-06-06 17:03:08
  * @Description  : file content
  * @FilePath     : \easy_work_templates\README.md
 -->
@@ -28,24 +28,11 @@
  * @Description  : file content
  * @FilePath     : \easy_work_templates\Bash.md
 -->
-### EASY BASH
+### [EASY BASH](./Bash.md)
 
 This is a reminder for bash. 
 
 ```bash
-ctrl+u       # delete before
-ctrl+k       # delete after
-ctrl+a       # go to head
-ctrl+e       # go to end
-
-# Variable with no space besides =
-myname="Guanyue Li"
-echo ${myname} 
-# Variable precomputation
-version=$(uname -r)
-echo ${version}
-unset version   # cancel
-
 # Prompt to read
 read -p "Please Enter Your name (default 30s): " -t 30 named
 echo ${named}
@@ -60,11 +47,11 @@ echo ${sum}
 path=$PATH
 echo ${path#<pattern>}     # delete the shorted matched pattern from the beginning
 echo ${path##<pattern>}     # delete the longest matched pattern from the beginning
+
 # examples:
 echo ${MAIL##/*/}   
 echo ${path#*:}
 echo ${MAIL%/*}    # /var/mail
-
 # replace examples
 echo ${path/bin/666}  
 echo ${path//bin/666}  # replace all
@@ -96,7 +83,4 @@ sort
 uniq
 wc
 ls -l /home | tee ~/homelist | more
-
-# String Operators
-
 ```
